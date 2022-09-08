@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: check
         run: |
+          env
           echo "OWNER=${GITHUB_REPOSITORY_OWNER} >> $GITHUB_ENV"
         env:
           OWNER: "${{ env.OWNER }}/botkube"

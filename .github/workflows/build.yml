@@ -7,8 +7,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: prepare
+        run: |
+          echo "OWNER=${{ github.repository.owner}}" >> $GITHUB_ENV
       - name: check
         run: |
-          env
-        env:
-          OWNER: "${{ github.repository.owner }}/botkube"
+          echo ${{ env.OWNER}}

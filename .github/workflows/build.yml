@@ -11,4 +11,4 @@ jobs:
         run: |
           env
         env:
-          OWNER: "$env:GITHUB_REPOSITORY_OWNER/botkube"
+          OWNER: "${{ github.repository.owner }}/botkube"

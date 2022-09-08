@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: prepare
         run: |
-          echo "OWNER=${{ github.repository.owner}}" >> $GITHUB_ENV
+          echo "OWNER=$GITHUB_REPOSITORY_OWNER" >> $GITHUB_ENV
       - name: check
         run: |
           echo ${{ env.OWNER}}
